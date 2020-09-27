@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<section id="contact">
+    <h1 class="heading">CONTACT</h1>
+    <p class="head-p">Do you have any questions? Please do not hesitate to contact. I will come back to you
+        within a matter of hours to help you.</p>
+    <div class="contact">
+        <form action="" method="post" id="form-wrapper">
+            {% csrf_token %}
+            {{form.non_field_errors}}
+            <div class="field">
+                {{form.name.errors}}
+                <label for="id_name">Name: </label>
+                {{form.name}}
+                <!-- <input type="text" id="name" name="name"> -->
+            </div>
+            <div class="field">
+                {{form.com_name.errors}}
+                <label for="id_com_name">Compnay Name: </label>
+                {{form.com_name}}
+                <!-- <input type="text" id="com-name" name="com_name"> -->
+            </div>
+            <div class="field">
+                {{form.com_add.errors}}
+                <label for="id_com_add">Company Address: </label>
+                {{form.com_add}}
+                <!-- <input type="text" id="com-add" name="com_add"> -->
+            </div>
+            <div class="field">
+                {{form.email.errors}}
+                <label for="id_email">Your Email: </label>
+                {{form.email}}
+                <!-- <input type="text" id="email" name="email"> -->
+            </div>
+            <div class="field">
+                {{form.mobile.errors}}
+                <label for="id_mobile">Mobile No.: </label>
+                {{form.mobile}}
+                <!-- <input type="text" id="mobile" name="mobile"> -->
+            </div>
+            <div class="field">
+                {{form.message.errors}}
+                <label for="id_message">Message: </label>
+                {{form.message}}
+                <!-- <input type="text" id="message" name="message"> -->
+            </div>
+            <div class="form-btn">
+                <input type="submit" value="Send">
+            </div>
+        </form>
+        <div class="details-box">
+            <div class="box">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Mehkar,Maharastra,India</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-phone-alt"></i>
+                <p>+91-9921542442</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-envelope"></i>
+                <p>motheakash321@gmail.com</p>
+            </div>
+            <div class="social-links">
+                <a href="https://twitter.com/AkashMothe"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/akash.mothe.967"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/mr.akk1/?hl=en"><i class="fab fa-instagram"></i></a>
+                <a href="https://in.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+                
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
